@@ -1,0 +1,17 @@
+﻿@model IEnumerable<net_core_identity.Models.ApplicationUser>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Registered users</h2>
+
+<ul>
+@foreach (var item in Model)
+{
+  <li>
+    @item --- @Html.ActionLink("Edit", "Edit", "Roles", new { userId = item.Id })
+
+  </li>
+}
+</ul>
