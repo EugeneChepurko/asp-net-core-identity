@@ -14,8 +14,7 @@ namespace net_core_identity.Controllers
         [Authorize(Roles ="admin,moderator")]
         public IActionResult About()
         {
-
-            ViewData["Message"] = "Only for admin & moders.";
+            ViewData["Message"] = "Only for admin & moderators.";
             ViewData["UserName"] = User.Identity.Name;
             
             return View();

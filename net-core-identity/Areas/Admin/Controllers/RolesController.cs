@@ -50,11 +50,8 @@ namespace net_core_identity.Areas.Admin.Controllers
             {
                 IdentityResult result = await _roleManager.DeleteAsync(role);
             }
-
-            
             return RedirectToAction("Index");
         }
-
 
         public IActionResult UserList()
         {
@@ -79,7 +76,6 @@ namespace net_core_identity.Areas.Admin.Controllers
                 };
                 return View(model);
              }
-
             return NotFound();
         }
         [HttpPost]
@@ -104,7 +100,6 @@ namespace net_core_identity.Areas.Admin.Controllers
 
                 return RedirectToAction("Index", "Users");
             }
-
             return NotFound();
         }
     }

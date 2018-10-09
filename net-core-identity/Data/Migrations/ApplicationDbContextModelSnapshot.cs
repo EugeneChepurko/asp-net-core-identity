@@ -153,6 +153,8 @@ namespace net_core_identity.Data.Migrations
                     b.Property<string>("NormalizedUserName")
                         .HasMaxLength(256);
 
+                    b.Property<string>("Password");
+
                     b.Property<string>("PasswordHash");
 
                     b.Property<string>("PhoneNumber");
@@ -165,6 +167,8 @@ namespace net_core_identity.Data.Migrations
 
                     b.Property<string>("UserName")
                         .HasMaxLength(256);
+
+                    b.Property<int>("Year");
 
                     b.HasKey("Id");
 

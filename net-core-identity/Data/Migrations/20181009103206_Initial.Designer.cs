@@ -11,8 +11,8 @@ using System;
 namespace net_core_identity.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20181005095613_MyMigration")]
-    partial class MyMigration
+    [Migration("20181009103206_Initial")]
+    partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -154,6 +154,8 @@ namespace net_core_identity.Data.Migrations
                     b.Property<string>("NormalizedUserName")
                         .HasMaxLength(256);
 
+                    b.Property<string>("Password");
+
                     b.Property<string>("PasswordHash");
 
                     b.Property<string>("PhoneNumber");
@@ -166,6 +168,8 @@ namespace net_core_identity.Data.Migrations
 
                     b.Property<string>("UserName")
                         .HasMaxLength(256);
+
+                    b.Property<int>("Year");
 
                     b.HasKey("Id");
 

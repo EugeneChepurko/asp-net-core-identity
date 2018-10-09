@@ -9,6 +9,10 @@ namespace net_core_identity.Models.AccountViewModels
     public class RegisterViewModel
     {
         [Required]
+        [Display(Name = "Year")]
+        public int Year { get; set; }
+
+        [Required]
         [EmailAddress]
         [Display(Name = "Email")]
         public string Email { get; set; }

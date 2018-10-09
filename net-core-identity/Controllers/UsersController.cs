@@ -1,29 +1,26 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Identity;
+﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using net_core_identity.Areas.Admin.Models;
 using net_core_identity.Models;
-//using net_core_identity.Models.AccountViewModels;
-//using CreateUserViewModel = net_core_identity.Areas.Admin.Models.CreateUserViewModel;
+using net_core_identity.Models.AccountViewModels;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 
-namespace net_core_identity.Areas.Admin.Controllers
+namespace net_core_identity.Controllers
 {
-    [Area("Admin")]
     public class UsersController : Controller
     {
-        private readonly UserManager<ApplicationUser> _userManager;
+        UserManager<ApplicationUser> _userManager;
 
         public UsersController(UserManager<ApplicationUser> userManager)
         {
             _userManager = userManager;
         }
-        public IActionResult Index()
-        {
-            return View(_userManager.Users.ToList());
-        }
+
+        public IActionResult Index() => View(_userManager.Users.ToList());
+
         public IActionResult Create() => View();
 
         [HttpPost]
@@ -68,7 +65,7 @@ namespace net_core_identity.Areas.Admin.Controllers
                 if (user != null)
                 {
                     user.Email = model.Email;
-                    user.UserName = model.Email;
+                    user.Id = model.Email;
                     user.Year = model.Year;
 
                     var result = await _userManager.UpdateAsync(user);
