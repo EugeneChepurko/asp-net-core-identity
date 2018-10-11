@@ -1,13 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using net_core_identity.Areas.Admin.Models;
 using net_core_identity.Models;
-//using net_core_identity.Models.AccountViewModels;
-//using CreateUserViewModel = net_core_identity.Areas.Admin.Models.CreateUserViewModel;
 
 namespace net_core_identity.Areas.Admin.Controllers
 {

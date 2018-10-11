@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
@@ -17,7 +16,6 @@ namespace net_core_identity.Areas.Admin.Controllers
 
         public RolesController(RoleManager<IdentityRole> roleManager, UserManager<ApplicationUser> userManager)
         {
-            
             _roleManager = roleManager;
             _userManager = userManager;
         }

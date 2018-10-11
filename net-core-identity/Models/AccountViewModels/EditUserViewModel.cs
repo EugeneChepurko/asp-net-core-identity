@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace net_core_identity.Models.AccountViewModels
+﻿namespace net_core_identity.Models.AccountViewModels
 {
     public class EditUserViewModel
     {
